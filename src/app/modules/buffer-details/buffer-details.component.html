@@ -1,0 +1,203 @@
+<!-- start page title -->
+<div class="row">
+  <div class="col-12">
+      <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+          <h4 class="mb-sm-0 font-size-18">Buffer Details</h4>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card top-line">
+      <div class="card-body border-bottom">
+        <div class="float-left d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <a class="btn btn-primary">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card top-line">
+      <div class="card-body border-bottom">
+        <div class="row g-3">
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Employee ID
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Bench Start Date
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <p-calendar [showIcon]="true" inputId="icon"></p-calendar>
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Days Elapsed
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <input type="number" class="form-control">
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Name
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label">
+              Category
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <p-dropdown appendTo="body" [style]="{'width':'100%'}" [options]="categoryList" [editable]="true"
+              [filter]="true" optionLabel="categoryName">
+            </p-dropdown>
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Existing Skills
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <p-multiSelect inputId="multiselect" [style]="{'width':'100%'}" [options]="skillList"
+              optionLabel="skillName" [filter]="false" display="chip"></p-multiSelect>
+          </div>
+
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Date of Joining
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <p-calendar [showIcon]="true" inputId="icon"></p-calendar>
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Total Experience
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label">
+              Group
+            </label>
+          </div>
+          <div class="col-xxl-3 col-lg-6">
+            <p-dropdown  [style]="{'width':'100%'}" [options]="groupList"
+              [editable]="true" [filter]="true" optionLabel="groupName">
+            </p-dropdown>
+          </div>
+
+          <div class="col-xxl-1 col-lg-6">
+            <label class="form-check-label mt-2">
+              Current Status
+            </label>
+          </div>
+          <div class="col-xxl-6 col-lg-6">
+            <textarea rows="5" class="w-100"></textarea>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end col-->
+
+</div>
+<div class="row">
+
+  <div class="col-xl-12">
+
+    <div class="card">
+      <div class="card-body">
+
+        <p-table [value]="bufferList" [paginator]="true" [rows]="10"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+          [rowsPerPageOptions]="[10,25,50]" [showCurrentPageReport]="true"
+          [tableStyle]="{'min-width': '50rem'}" class="table common-table align-middle nowrap">
+          <ng-template pTemplate="header">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col" pSortableColumn="Name">Name
+                <p-sortIcon field="Name"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="DOJ">DOJ
+                <p-sortIcon field="DOJ"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="Group">Group
+                <p-sortIcon field="Group"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="Skill">Existing Skill
+                <p-sortIcon field="Skill"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="Category">Category
+                <p-sortIcon field="Category"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="BenchStartDate">Bench Start Date
+                <p-sortIcon field="BenchStartDate"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="DaysElapsed">Days Elapsed
+                <p-sortIcon field="DaysElapsed"></p-sortIcon>
+              </th>
+              <th scope="col" pSortableColumn="CurrentStatus">Current Status
+                <p-sortIcon field="CurrentStatus"></p-sortIcon>
+              </th>
+              <th scope="col">Action</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-record let-rowIndex="rowIndex">
+            <tr>
+              <td> {{record?.EmpId}}</td>
+              <td>{{record?.Name}}</td>
+              <td>{{record?.DOJ}}</td>
+              <td>{{record?.Group}}</td>
+              <td>{{record?.Skill}}</td>
+              <td>{{record?.Category}}</td>
+              <td>{{record?.BenchStartDate}}</td>
+              <td>{{record?.DaysElapsed}}</td>
+              <td>{{record?.CurrentStatus}}</td>
+              <td><i
+                class="mdi mdi-pencil-outline"></i> <i class="mdi mdi-trash-can-outline"></i></td>
+            </tr>
+
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-record>
+            <tr [attr.colspan]="record?.length">
+              <td colspan="3" class="text-center"><b>No records found</b></td>
+            </tr>
+          </ng-template>
+        </p-table>
+
+      </div>
+    </div>
+    <!-- end row -->
+
+  </div>

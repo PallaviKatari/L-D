@@ -1,0 +1,140 @@
+<!-- ========== Start Login form ========== -->
+<!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand p-2" href="https://www.cgvakindia.com/" target="_blank">
+    <img src="assets/images/logo-blue.png" alt="cgvak">
+  </a>
+</nav>
+<!-- <section class="login_page">
+  <div class="container">
+    <div class="user signinBx">
+      <div class="imgBx">
+        <div class="login_logo">
+          <img alt="" class="img-fluid">
+        </div>
+      </div>
+      <div class="formBx">
+        <form [formGroup]="loginForm">
+          <h2>Login</h2>
+          <div>
+            <label>Username<span class="text-danger">*</span></label>
+            <input type="text" placeholder="Please Enter Username" formControlName="username" class="input"
+              aria-describedby="loginUsername-help" name="username" required
+              [ngClass]="loginForm.controls['username'].touched && loginForm.controls['username'].invalid || errorMessage ? 'ng-invalid ng-dirty' : ''" />
+            <small id="loginUsername-help"
+              *ngIf="loginForm.controls['username'].touched && loginForm.controls['username'].invalid"
+              class="p-error block">Username is
+              Required!</small>
+          </div>
+          <div>
+            <label>Password<span class="text-danger">*</span></label>
+            <input aria-describedby="loginPassword-help" formControlName="password" type="password"
+              placeholder="Please Enter Password" class="input" required
+              [ngClass]="loginForm.controls['password'].touched && loginForm.controls['password'].invalid || errorMessage ? 'ng-invalid ng-dirty' : ''" />
+            <small id="loginPassword-help"
+              *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+              class="p-error block">Password is
+              Required!</small>
+          </div>
+          <div class="remember_forgot">
+            <div class="remember">
+              <input type="checkbox" id="1" name="1" value="1">
+              <label for="1"> Remember Me</label>
+            </div>
+            <div class="forgot">
+              <p class="signup">
+                <a routerLink="forgot-password">Forgot Password ?</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="login_button text-center">
+            <input type="submit" name="" value="Login" class="input" [disabled]="loginForm.invalid"
+              (click)="submit(loginForm.value)" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<div class="container text-body">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-9 col-lg-6 col-xl-6 my-lg-5 py-lg-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <span class="display-1">4</span><span class="ml-4" style="position: relative; bottom:45%;">BUFFER RESOURCES</span>
+        </div> <div class="col-lg-6">
+          <span class="display-1">6</span><span class="ml-4" style="position: relative; bottom:45%;">BENCH RESOURCES</span>
+        </div>
+        <div class="col-lg-6">
+          <span class="display-1">8</span><span class="ml-4" style="position: relative; bottom:45%;">HOME GROWN TRAINEES</span>
+        </div>
+        <div class="col-lg-6">
+          <span class="display-1">2</span><span class="ml-4" style="position: relative; bottom:45%;">ON NOTICE</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1 my-lg-5 py-lg-5">
+      <div class="card p-4 shadow p-3 mb-5 bg-white rounded">
+      <form class="formBx" [formGroup]="loginForm">
+        <h2 class="text-center text-primary">Login</h2>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label">Username<span class="text-danger">*</span></label>
+          <input type="text" placeholder="Please Enter Username" formControlName="username" class="input form-control"
+            aria-describedby="loginUsername-help" name="username" required
+            [ngClass]="loginForm.controls['username'].touched && loginForm.controls['username'].invalid || errorMessage ? 'ng-invalid ng-dirty' : ''" />
+          <small id="loginUsername-help"
+            *ngIf="loginForm.controls['username'].touched && loginForm.controls['username'].invalid"
+            class="p-error block">Username is
+            Required!</small>
+          <div class="form-notch">
+            <div class="form-notch-leading" style="width: 9px;"></div>
+            <div class="form-notch-middle" style="width: 88.8px;"></div>
+            <div class="form-notch-trailing"></div>
+          </div>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-3">
+          <label class="form-label">Password<span class="text-danger">*</span></label>
+          <input aria-describedby="loginPassword-help" formControlName="password" type="password"
+            placeholder="Please Enter Password" class="input form-control" required
+            [ngClass]="loginForm.controls['password'].touched && loginForm.controls['password'].invalid || errorMessage ? 'ng-invalid ng-dirty' : ''" />
+          <small id="loginPassword-help"
+            *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+            class="p-error block">Password is
+            Required!</small>
+          <div class="form-notch">
+            <div class="form-notch-leading" style="width: 9px;"></div>
+            <div class="form-notch-middle" style="width: 64px;"></div>
+            <div class="form-notch-trailing"></div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Checkbox -->
+          <div class="form-check mb-0">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3">
+            <label class="form-check-label" for="form2Example3">
+              Remember me
+            </label>
+          </div>
+          <p class="signup">
+            <a routerLink="forgot-password">Forgot Password ?</a>
+          </p>
+        </div>
+        <div class="login_button mt-4">
+          <input type="submit" name="" value="Login" class="input btn btn-primary" [disabled]="loginForm.invalid"
+            (click)="submit(loginForm.value)" />
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+<footer class="p-3" style="background-color: whitesmoke;">
+  <p class="text-center text-muted">© CG-VAK Software & Exports Ltd. 2023</p>
+</footer>
