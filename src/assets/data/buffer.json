@@ -1,0 +1,64 @@
+{ 
+    "bufferdetails": [
+    {
+      "empid": 1377,
+      "empname": "GOTHAI VANI N",
+      "doj": "09/05/2022",
+      "category":"BUFFER",
+      "group": "CG",
+      "benchstartdate": "09/05/2022",
+      "totalexp": 1.1,
+      "dayselapsed": 262,
+      "existingskill":".NET",
+      "currentstatus":"Working in Web SMS, Training in AngularJS going on"
+    },
+    {
+        "empid": 1411,
+        "empname": "AKSHARAA PARAMESWARAN",
+        "doj": "09/05/2022",
+        "category":"BENCH",
+        "group": "CG",
+        "benchstartdate": "09/05/2022",
+        "totalexp": 2.3,
+        "dayselapsed": 185,
+        "existingskill":"Java/ J2EE/ Spring boot/ Hibernate",
+        "currentstatus":"Completed Web UI & SQL Server, React training going on, Planned to give Designer training"
+      },
+      {
+        "empid": 1253,
+        "empname": "MAHESH MOHAN",
+        "doj": "11/08/2021",
+        "category":"BENCH",
+        "group": "CG",
+        "benchstartdate": "01/01/2023",
+        "totalexp": 15,
+        "dayselapsed": 185,
+        "existingskill":"VB6,MSSQL,ASP",
+        "currentstatus":"C#,MVC,Angular 13,.NET Core - Training completed" 
+      },
+      {
+        "empid": 1367,
+        "empname": "SUBASH SG",
+        "doj": "08/08/2022",
+        "category":"BUFFER",
+        "group": "CG",
+        "benchstartdate": "08/08/2022",
+        "totalexp": 1,
+        "dayselapsed": 290,
+        "existingskill":"Angular 9",
+        "currentstatus":"Angular 13,JavaScript-Trainig completed,Planned to give Full stack, C# started" 
+      },
+      {
+        "empid": 1389,
+        "empname": "KURIAN CHERIAN",
+        "doj": "10/06/2022",
+        "category":"BUFFER",
+        "group": "CG",
+        "benchstartdate": "10/06/2022",
+        "totalexp": 3.5,
+        "dayselapsed": 231,
+        "existingskill":".NET MVC",
+        "currentstatus":".NET Core training completed" 
+      }
+   ]
+}

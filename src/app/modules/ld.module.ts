@@ -15,12 +15,14 @@ import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { ShadowDetailsComponent } from './shadow-details/shadow-details.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     BufferDetailsComponent,
+    ShadowDetailsComponent,
   ],
   imports: [
     CommonModule,

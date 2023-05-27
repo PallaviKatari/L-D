@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  submit(formValue: LoginParam) {
+  submit(_formValue: LoginParam) {
     this.loginForm.markAllAsTouched();
     let login = {
       "userName": this.loginForm.value.username,
